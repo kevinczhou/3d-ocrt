@@ -4,7 +4,7 @@ We have extended optical coherence refraction tomography (OCRT) to 3D by incorpo
 See also our original 2D OCRT implementation: https://github.com/kevinczhou/optical-coherence-refraction-tomography/
 
 ## Datasets
-The datasets for the four biological samples analyzed in the paper (fruit fly, zebrafish, mouse trachea, mouse esophagus) can be downloaded from TBD. Be warned that they are rather large -- 123 GB per sample. This corresponds to 96 multi-angle OCT volumes with 400 by 400 A-scans, each with 2000 pixels (96\*400\*400\*2000\*32 bits = 122.88 GB).
+The datasets for the four biological samples analyzed in the paper (fruit fly, zebrafish, mouse trachea, mouse esophagus) can be downloaded from [here](https://doi.org/10.7924/r46h4pk10). Be warned that they are rather large -- 123 GB per sample. This corresponds to 96 multi-angle OCT volumes with 400 by 400 A-scans, each with 2000 pixels (96\*400\*400\*2000\*32 bits = 122.88 GB).
 
 I've also included checkpoint files for each sample, which contain pre-calibrated boundary conditions that are used by tensorflow to initialize the optimization variables.
 
