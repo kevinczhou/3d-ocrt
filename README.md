@@ -4,9 +4,9 @@ We have extended optical coherence refraction tomography (OCRT) to 3D by incorpo
 See also our original 2D OCRT implementation: https://github.com/kevinczhou/optical-coherence-refraction-tomography/
 
 ## Datasets
-The datasets for the four biological samples analyzed in the paper (fruit fly, zebrafish, mouse trachea, mouse esophagus) can be downloaded from [here](https://doi.org/10.7924/r46h4pk10). Be warned that they are rather large -- 123 GB per sample. This corresponds to 96 multi-angle OCT volumes with 400 by 400 A-scans, each with 2000 pixels (96\*400\*400\*2000\*32 bits = 122.88 GB).
+The datasets for the four biological samples analyzed in the paper (fruit fly, zebrafish, mouse trachea, mouse esophagus) can be downloaded from [here](https://doi.org/10.7924/r46h4pk10) as `hdf5` files. Be warned that they are rather large -- 123 GB per sample. This corresponds to 96 multi-angle OCT volumes with 400 by 400 A-scans, each with 2000 pixels (96\*400\*400\*2000\*32 bits = 122.88 GB). I've also included tensorflow checkpoint files for each sample (`tf_ckpts`), which contain pre-calibrated boundary conditions that are used by tensorflow to initialize the optimization variables.
 
-I've also included checkpoint files for each sample, which contain pre-calibrated boundary conditions that are used by tensorflow to initialize the optimization variables.
+Note that the A-scans in these `hdf5` files are saved in a pre-scrambled order so that the A-scans can be read in a random order *contiguously*, and therefore more efficiently, from storage for stochastic gradient descent optimization. If you wish to form images (i.e., B-scans) from the A-scans, then use the `get_Bscan` function in `paraOCRT.py` by specifying indices for the angle and lateral coordinate.
 
 ## Dependencies
 The code depends on the following libraries:
