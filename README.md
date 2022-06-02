@@ -25,4 +25,4 @@ Alternatively, you can use `environment.yml` to recreate the conda environment I
 Download the biological sample(s) into `/data` and run the jupyter notebook. I tested this code on an 11-GB GPU, but if your GPU is smaller (or larger), you can try adjusting `batch_size_stratified` in the second notebook cell. Unlike our [2D implementation](https://github.com/kevinczhou/optical-coherence-refraction-tomography/), this version doesn't require as much CPU RAM (but does require significantly more storage space to accommodate the 123-GB/sample datasets).
 
 ## Citation
-TBD
+K. C. Zhou, R. P. McNabb, R. Qian, S. Degan, A. Dhalla, S. Farsiu, and J. A. Izatt, "Computational 3D microscopy with optical coherence refraction tomography," Optica 9, 593-601 (2022)
